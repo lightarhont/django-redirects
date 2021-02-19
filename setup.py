@@ -7,8 +7,8 @@ import os
 
 exec(open('redirects/metadata.py').read())
 
-github_url = 'https://github.com/fabiocaccamo'
-package_name = 'django-redirects'
+github_url = 'https://github.com/lightarhont'
+package_name = 'django-redirects-new'
 package_url = '{}/{}'.format(github_url, package_name)
 package_path = os.path.abspath(os.path.dirname(__file__))
 long_description_file_path = os.path.join(package_path, 'README.md')

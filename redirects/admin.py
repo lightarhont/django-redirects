@@ -11,10 +11,19 @@ else:
     from django.utils.translation import gettext_lazy as _
 
 from redirects.models import Redirect
+from import_export import resources
+from import_export.admin import ImportExportModelAdmin
+
+
+class RedirectResource(resources.ModelResource):
+    class Meta:
+        model = Redirect
 
 
 @admin.register(Redirect)
-class RedirectAdmin(admin.ModelAdmin):
+class RedirectAdmin(ImportExportModelAdmin):
+    
+    resource_class = RedirectResource
 
     def redirect_display(self, obj):
         html = """
